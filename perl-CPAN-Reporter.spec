@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests		# do not perform "make test"
+%bcond_with	tests		# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	CPAN
@@ -8,12 +8,12 @@
 Summary:	CPAN::Reporter - Adds CPAN Testers reporting to CPAN.pm
 #Summary(pl.UTF-8):	
 Name:		perl-CPAN-Reporter
-Version:	1.0801
+Version:	1.1708
 Release:	1
 License:	Apache
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/CPAN/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	5acdfc0d48a661870b072dfb480c4246
+# Source0-md5:	68e38ac6a4ad4404da66d8c828b59e63
 URL:		http://search.cpan.org/dist/CPAN-Reporter/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
