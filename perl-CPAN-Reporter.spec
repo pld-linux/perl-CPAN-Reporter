@@ -8,12 +8,12 @@
 Summary:	CPAN::Reporter - Adds CPAN Testers reporting to CPAN.pm
 #Summary(pl.UTF-8):	
 Name:		perl-CPAN-Reporter
-Version:	1.1708
+Version:	1.2003
 Release:	1
 License:	Apache
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/CPAN/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	68e38ac6a4ad4404da66d8c828b59e63
+# Source0-md5:	3f705c2b1f38bd8956447043f2c557c5
 URL:		http://search.cpan.org/dist/CPAN-Reporter/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -49,17 +49,17 @@ send the results of building and testing modules to the CPAN Testers project.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Build.PL \
+%{__perl} Makefile.PL \
 	destdir=$RPM_BUILD_ROOT \
 	installdirs=vendor
-./Build
+%{__make}
 
-%{?with_tests:./Build test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-./Build install
+%{__make} install
 
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 cp -a examples $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
