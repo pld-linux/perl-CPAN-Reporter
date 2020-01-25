@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	CPAN
 %define	pnam	Reporter
 Summary:	CPAN::Reporter - Adds CPAN Testers reporting to CPAN.pm
