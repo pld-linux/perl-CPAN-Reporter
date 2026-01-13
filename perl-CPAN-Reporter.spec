@@ -8,7 +8,7 @@ Summary:	CPAN::Reporter - Adds CPAN Testers reporting to CPAN.pm
 #Summary(pl.UTF-8):	
 Name:		perl-CPAN-Reporter
 Version:	1.2003
-Release:	1
+Release:	2
 License:	Apache
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/CPAN/%{pdir}-%{pnam}-%{version}.tar.gz
